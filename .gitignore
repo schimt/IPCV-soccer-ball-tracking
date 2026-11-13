@@ -1,0 +1,32 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ultralytics/
+
+# Videos and weights are not distributed
+*.mp4
+*.pt
+
+# Downloaded data and converted datasets
+data/soccernet/train/
+data/soccernet_v2/train/
+data/yolo/images/
+data/yolo/labels/
+data/yolo/dataset.yaml
+data/yolo_v2/images/
+data/yolo_v2/labels/
+data/yolo_v2/dataset.yaml
+
+# Outputs of new runs
+runs/nn_pilot/fit/weights/
+runs/nn_expanded_v2/fit/weights/
+runs/reproduced/
+results/reproduced*/
+results/development_v2/*
+!results/development_v2/metrics.json
+!results/development_v2/metrics.csv
+
+# The report is submitted on Moodle, not in this repository
+report/report_final.pdf
+report/latex/

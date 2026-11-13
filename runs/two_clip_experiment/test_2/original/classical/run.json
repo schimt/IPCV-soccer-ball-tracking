@@ -1,0 +1,93 @@
+{
+  "video": {
+    "video": "data\\test_2\\denmark_wales_clip_1min.mp4",
+    "sha256": "cc9ad1112405eea45db279a3923b15def4fb108b2000325f44df09e545a8a603",
+    "fps": 25.0,
+    "frames": 1500,
+    "width": 640,
+    "height": 360,
+    "duration_seconds": 60.0
+  },
+  "config": {
+    "seed": 42,
+    "classical": {
+      "kernel": 17,
+      "contrast": 24,
+      "min_area": 3,
+      "max_area": 500,
+      "max_aspect": 4.0,
+      "min_fill": 0.22,
+      "max_candidates": 80,
+      "min_score": 0.28
+    },
+    "tracker": {
+      "max_gap_seconds": 0.24,
+      "gate_diagonal_fraction": 0.07,
+      "process_noise": 1200.0,
+      "measurement_noise": 16.0,
+      "min_acquire_score": 0.4
+    },
+    "motion": {
+      "enabled": true,
+      "cut_difference": 55
+    },
+    "nn": {
+      "weights": "yolov8n.pt",
+      "imgsz": 1280,
+      "confidence": 0.15,
+      "device": "0"
+    },
+    "train": {
+      "epochs": 30,
+      "imgsz": 1280,
+      "batch": 2,
+      "patience": 8,
+      "workers": 0,
+      "amp": false,
+      "optimizer": "AdamW",
+      "lr0": 0.001,
+      "mosaic": 0.0,
+      "scale": 0.15,
+      "fliplr": 0.5,
+      "degrees": 0.0
+    },
+    "evaluation": {
+      "distance_diagonal_fraction": 0.01,
+      "annotation_stride": 1
+    }
+  },
+  "method": "classical",
+  "environment": {
+    "python": "3.13.9",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "processor": "Intel64 Family 6 Model 94 Stepping 3, GenuineIntel",
+    "opencv": "5.0.0"
+  },
+  "nn": null,
+  "frames": 1500,
+  "camera_cut_frames": [
+    1,
+    237,
+    239,
+    240,
+    481,
+    734,
+    735,
+    737,
+    738,
+    1000,
+    1001,
+    1003,
+    1004,
+    1360
+  ],
+  "timing": {
+    "pipeline_fps": 112.34306432228769,
+    "end_to_end_fps": 89.77865790123644,
+    "median_frame_ms": 8.450150000044232,
+    "pipeline_includes": "camera motion, detection, association; CPU transfer synchronizes NN",
+    "pipeline_excludes": "video decode/encode, model loading, one warm-up",
+    "end_to_end_includes": "decode, warm-up, pipeline, rendering, encoding, CSV write"
+  },
+  "config_file": "runs\\two_clip_frozen\\original\\classical.yaml"
+}

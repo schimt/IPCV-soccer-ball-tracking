@@ -1,0 +1,69 @@
+{
+  "source": {
+    "video": "C:\\Users\\Nikolai\\Desktop\\ImageProcessing\\MiniProject\\data\\test\\source_video.mp4",
+    "sha256": "a75125563d6f235214671ec84a3194aac256c0c3dbec634224bfba5514362e6a",
+    "fps": 25.0,
+    "frames": 2125,
+    "width": 1350,
+    "height": 1080,
+    "duration_seconds": 85.0
+  },
+  "clip": {
+    "video": "C:\\Users\\Nikolai\\Desktop\\ImageProcessing\\MiniProject\\data\\test\\clip.mp4",
+    "sha256": "3bd8ff268773b7886218460b36c5ea4bdd42494f31d46d23f1346ff60b7083f4",
+    "fps": 25.0,
+    "frames": 1500,
+    "width": 1350,
+    "height": 1080,
+    "duration_seconds": 60.0
+  },
+  "source_start_frame": 0,
+  "source_end_frame_exclusive": 1500,
+  "source_start_seconds": 0.0,
+  "source_end_seconds_exclusive": 60.0,
+  "source_timestamps_verified": true,
+  "decoded_output_frames": 1500,
+  "last_frame_timestamp": 59.96,
+  "encoding": "OpenCV/FFmpeg MPEG-4 Part 2 (mp4v), original pixel dimensions, no audio",
+  "temporal_resampling": false,
+  "spatial_resizing": false,
+  "role": "sole_final_test",
+  "source_url": "https://www.youtube.com/watch?v=t0GESlaVNdE",
+  "source_url_provenance": "User-supplied; local file is authoritative",
+  "selection_reason": "First contiguous 60 seconds, fixed before inference; retains all shots and visibility changes.",
+  "selection_without_model_predictions": true,
+  "annotations": "C:\\Users\\Nikolai\\Desktop\\ImageProcessing\\MiniProject\\data\\test\\annotations.csv",
+  "annotation_stride": 1,
+  "permitted_uses": [
+    "manual_annotation",
+    "final_evaluation",
+    "presentation"
+  ],
+  "forbidden_uses": [
+    "training",
+    "validation",
+    "hyperparameter_selection"
+  ],
+  "development_snapshot": {
+    "config_sha256": "e95b4169590fea59e3c577855cc8e835b6721acbe1c17e1ff4fde671eff7aa0e",
+    "config_text": "seed: 42\nclassical:\n  kernel: 17\n  contrast: 24\n  min_area: 3\n  max_area: 500\n  max_aspect: 4.0\n  min_fill: 0.22\n  max_candidates: 80\n  min_score: 0.28\ntracker:\n  max_gap_seconds: 0.24\n  gate_diagonal_fraction: 0.07\n  process_noise: 1200.0\n  measurement_noise: 16.0\n  min_acquire_score: 0.40\nmotion:\n  enabled: true\n  cut_difference: 55\nnn:\n  weights: yolov8n.pt\n  imgsz: 1280\n  confidence: 0.15\n  device: '0'\ntrain:\n  epochs: 30\n  imgsz: 1280\n  batch: 2\n  patience: 8\n  workers: 0\n  amp: false\n  optimizer: AdamW\n  lr0: 0.001\n  mosaic: 0.0\n  scale: 0.15\n  fliplr: 0.5\n  degrees: 0.0\nevaluation:\n  distance_diagonal_fraction: 0.01\n  annotation_stride: 1\n",
+    "purpose": "Development state recorded before clip selection/annotation; no test-driven tuning",
+    "pilot_weights_sha256": "3ee09740c18baa176c314a90731af209ccd88537535016d9a94a8abccfbc9cb8"
+  },
+  "annotation_count": 1500,
+  "annotation_hz": 25,
+  "annotation_schedule": "0,1,2,...,1499",
+  "annotation_policy": "Same 1500 manually reviewed frames for both methods; full-frame inference",
+  "method_freeze": {
+    "recorded_utc": "2026-10-05T12:23:14.607158+00:00",
+    "config_sha256": "e95b4169590fea59e3c577855cc8e835b6721acbe1c17e1ff4fde671eff7aa0e",
+    "weights_sha256": {
+      "runs\\nn_smoke\\fit\\weights\\best.pt": "913a9e7d94d269c9b448aedd9e4b6d3c70d8f520363103c669041d8403edbf81",
+      "runs\\nn_smoke\\fit\\weights\\last.pt": "86f4112cbc83838712b6ace5937aa55b7bf628f6e12abdc5407111c7e2ba05da",
+      "runs\\nn_pilot\\fit\\weights\\best.pt": "3ee09740c18baa176c314a90731af209ccd88537535016d9a94a8abccfbc9cb8",
+      "runs\\nn_pilot\\fit\\weights\\last.pt": "0848282ce78934f016563c33b6a211792cddf530b28d063cc843f24026a77e44",
+      "yolov8n.pt": "f59b3d833e2ff32e194b5bb8e08d211dc7c5bdf144b90d2c8412c47ccfc83b36"
+    },
+    "note": "Current method parameters and existing weight files retained; only annotation schedule changed from stride 5 to 1."
+  }
+}

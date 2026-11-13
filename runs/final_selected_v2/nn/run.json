@@ -1,0 +1,91 @@
+{
+  "video": {
+    "video": "C:\\Users\\Nikolai\\Desktop\\ImageProcessing\\MiniProject\\data\\test\\clip.mp4",
+    "sha256": "3bd8ff268773b7886218460b36c5ea4bdd42494f31d46d23f1346ff60b7083f4",
+    "fps": 25.0,
+    "frames": 1500,
+    "width": 1350,
+    "height": 1080,
+    "duration_seconds": 60.0
+  },
+  "config": {
+    "seed": 42,
+    "classical": {
+      "kernel": 17,
+      "contrast": 24,
+      "min_area": 3,
+      "max_area": 500,
+      "max_aspect": 4.0,
+      "min_fill": 0.22,
+      "max_candidates": 80,
+      "min_score": 0.28
+    },
+    "tracker": {
+      "max_gap_seconds": 0.24,
+      "gate_diagonal_fraction": 0.02,
+      "process_noise": 1200.0,
+      "measurement_noise": 16.0,
+      "min_acquire_score": 0.1,
+      "reacquire_score_margin": null
+    },
+    "motion": {
+      "enabled": true,
+      "cut_difference": 55
+    },
+    "nn": {
+      "weights": "C:\\Users\\Nikolai\\Desktop\\ImageProcessing\\MiniProject\\runs\\nn_expanded_v2\\fit\\weights\\best.pt",
+      "imgsz": 960,
+      "confidence": 0.01,
+      "device": "0"
+    },
+    "train": {
+      "epochs": 20,
+      "imgsz": 960,
+      "batch": 4,
+      "patience": 6,
+      "workers": 2,
+      "amp": false,
+      "optimizer": "AdamW",
+      "lr0": 0.001,
+      "mosaic": 0.0,
+      "scale": 0.15,
+      "fliplr": 0.5,
+      "degrees": 0.0
+    },
+    "evaluation": {
+      "distance_diagonal_fraction": 0.01,
+      "annotation_stride": 1
+    }
+  },
+  "method": "nn",
+  "environment": {
+    "python": "3.13.9",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "processor": "Intel64 Family 6 Model 94 Stepping 3, GenuineIntel",
+    "opencv": "5.0.0"
+  },
+  "nn": {
+    "weights": "C:\\Users\\Nikolai\\Desktop\\ImageProcessing\\MiniProject\\runs\\nn_expanded_v2\\fit\\weights\\best.pt",
+    "weights_sha256": "253ca907b503c84fa2fe93ff8245d21a6ec4b654ccdc0d27403f8bb075e562bb",
+    "training_status": "custom ball weights (see training run)",
+    "torch": "2.7.1+cu118",
+    "cuda_available": true,
+    "device": "0",
+    "gpu": "NVIDIA GeForce GTX 1070"
+  },
+  "frames": 1500,
+  "camera_cut_frames": [
+    886,
+    994,
+    1241
+  ],
+  "timing": {
+    "pipeline_fps": 22.96803765277508,
+    "end_to_end_fps": 17.08244588318732,
+    "median_frame_ms": 44.01694999978645,
+    "pipeline_includes": "camera motion, detection, association; CPU transfer synchronizes NN",
+    "pipeline_excludes": "video decode/encode, model loading, one warm-up",
+    "end_to_end_includes": "decode, warm-up, pipeline, rendering, encoding, CSV write"
+  },
+  "config_file": "C:\\Users\\Nikolai\\Desktop\\ImageProcessing\\MiniProject\\results\\final_selected_v2\\nn.yaml"
+}

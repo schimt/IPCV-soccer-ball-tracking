@@ -1,0 +1,41 @@
+seed: 42
+classical:
+  kernel: 17
+  contrast: 24
+  min_area: 3
+  max_area: 500
+  max_aspect: 4.0
+  min_fill: 0.22
+  max_candidates: 80
+  min_score: 0.28
+tracker:
+  max_gap_seconds: 0.24
+  gate_diagonal_fraction: 0.02
+  process_noise: 1200.0
+  measurement_noise: 16.0
+  min_acquire_score: 0.1
+  reacquire_score_margin: null
+motion:
+  enabled: true
+  cut_difference: 55
+nn:
+  weights: C:\Users\Nikolai\Desktop\ImageProcessing\MiniProject\runs\nn_expanded_v2\fit\weights\best.pt
+  imgsz: 960
+  confidence: 0.01
+  device: '0'
+train:
+  epochs: 20
+  imgsz: 960
+  batch: 4
+  patience: 6
+  workers: 2
+  amp: false
+  optimizer: AdamW
+  lr0: 0.001
+  mosaic: 0.0
+  scale: 0.15
+  fliplr: 0.5
+  degrees: 0.0
+evaluation:
+  distance_diagonal_fraction: 0.01
+  annotation_stride: 1

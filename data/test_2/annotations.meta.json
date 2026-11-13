@@ -1,0 +1,21 @@
+{
+  "video": "C:\\Users\\Nikolai\\Desktop\\ImageProcessing\\MiniProject\\data\\test_2\\denmark_wales_clip_1min.mp4",
+  "sha256": "cc9ad1112405eea45db279a3923b15def4fb108b2000325f44df09e545a8a603",
+  "fps": 25.0,
+  "frames": 1500,
+  "width": 640,
+  "height": 360,
+  "duration_seconds": 60.0,
+  "annotation_stride": 1,
+  "source": "Instructor-provided video; independent manual annotation",
+  "interpolation": false,
+  "tool": "balltrack OpenCV manual annotator",
+  "index_origin": 0,
+  "role": "test_clip_2",
+  "label": "Test clip 2: instructor Denmark-Wales",
+  "forbidden_uses": [
+    "training",
+    "validation",
+    "parameter_selection"
+  ]
+}

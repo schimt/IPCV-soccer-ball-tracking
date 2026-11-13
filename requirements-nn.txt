@@ -1,0 +1,3 @@
+-r requirements.txt
+ultralytics==8.3.228
+# Install torch/torchvision separately: see README (CPU or GTX 1070 CUDA 11.8).

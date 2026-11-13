@@ -1,0 +1,44 @@
+seed: 42
+classical:
+  kernel: 25
+  contrast: 40
+  min_area: 12
+  max_area: 400
+  max_aspect: 2.5
+  min_fill: 0.22
+  max_candidates: 80
+  min_score: 0.28
+  polarity: bright
+  min_field_context: 0.4
+  field_radius: 35
+  brightness_weight: 0.35
+tracker:
+  max_gap_seconds: 0.24
+  gate_diagonal_fraction: 0.07
+  process_noise: 1200.0
+  measurement_noise: 16.0
+  min_acquire_score: 0.4
+motion:
+  enabled: true
+  cut_difference: 55
+nn:
+  weights: yolov8n.pt
+  imgsz: 1280
+  confidence: 0.15
+  device: '0'
+train:
+  epochs: 30
+  imgsz: 1280
+  batch: 2
+  patience: 8
+  workers: 0
+  amp: false
+  optimizer: AdamW
+  lr0: 0.001
+  mosaic: 0.0
+  scale: 0.15
+  fliplr: 0.5
+  degrees: 0.0
+evaluation:
+  distance_diagonal_fraction: 0.01
+  annotation_stride: 1

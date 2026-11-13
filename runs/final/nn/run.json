@@ -1,0 +1,90 @@
+{
+  "video": {
+    "video": "C:\\Users\\Nikolai\\Desktop\\ImageProcessing\\MiniProject\\data\\test\\clip.mp4",
+    "sha256": "3bd8ff268773b7886218460b36c5ea4bdd42494f31d46d23f1346ff60b7083f4",
+    "fps": 25.0,
+    "frames": 1500,
+    "width": 1350,
+    "height": 1080,
+    "duration_seconds": 60.0
+  },
+  "config": {
+    "seed": 42,
+    "classical": {
+      "kernel": 17,
+      "contrast": 24,
+      "min_area": 3,
+      "max_area": 500,
+      "max_aspect": 4.0,
+      "min_fill": 0.22,
+      "max_candidates": 80,
+      "min_score": 0.28
+    },
+    "tracker": {
+      "max_gap_seconds": 0.24,
+      "gate_diagonal_fraction": 0.07,
+      "process_noise": 1200.0,
+      "measurement_noise": 16.0,
+      "min_acquire_score": 0.4
+    },
+    "motion": {
+      "enabled": true,
+      "cut_difference": 55
+    },
+    "nn": {
+      "weights": "yolov8n.pt",
+      "imgsz": 1280,
+      "confidence": 0.15,
+      "device": "0"
+    },
+    "train": {
+      "epochs": 30,
+      "imgsz": 1280,
+      "batch": 2,
+      "patience": 8,
+      "workers": 0,
+      "amp": false,
+      "optimizer": "AdamW",
+      "lr0": 0.001,
+      "mosaic": 0.0,
+      "scale": 0.15,
+      "fliplr": 0.5,
+      "degrees": 0.0
+    },
+    "evaluation": {
+      "distance_diagonal_fraction": 0.01,
+      "annotation_stride": 1
+    }
+  },
+  "method": "nn",
+  "environment": {
+    "python": "3.13.9",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "processor": "Intel64 Family 6 Model 94 Stepping 3, GenuineIntel",
+    "opencv": "5.0.0"
+  },
+  "nn": {
+    "weights": "runs/nn_pilot/fit/weights/best.pt",
+    "weights_sha256": "3ee09740c18baa176c314a90731af209ccd88537535016d9a94a8abccfbc9cb8",
+    "training_status": "custom ball weights (see training run)",
+    "torch": "2.7.1+cu118",
+    "cuda_available": true,
+    "device": "0",
+    "gpu": "NVIDIA GeForce GTX 1070"
+  },
+  "frames": 1500,
+  "camera_cut_frames": [
+    886,
+    994,
+    1241
+  ],
+  "timing": {
+    "pipeline_fps": 15.83015865833531,
+    "end_to_end_fps": 12.914788213590949,
+    "median_frame_ms": 65.62909999999533,
+    "pipeline_includes": "camera motion, detection, association; CPU transfer synchronizes NN",
+    "pipeline_excludes": "video decode/encode, model loading, one warm-up",
+    "end_to_end_includes": "decode, warm-up, pipeline, rendering, encoding, CSV write"
+  },
+  "config_file": "C:\\Users\\Nikolai\\Desktop\\ImageProcessing\\MiniProject\\configs\\default.yaml"
+}

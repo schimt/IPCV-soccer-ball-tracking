@@ -1,0 +1,2 @@
+# Store all files byte-for-byte so recorded SHA256 hashes stay valid after checkout
+* -text

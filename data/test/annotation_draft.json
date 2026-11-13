@@ -1,0 +1,286 @@
+{
+  "video_sha256": "3bd8ff268773b7886218460b36c5ea4bdd42494f31d46d23f1346ff60b7083f4",
+  "purpose": "UNREVIEWED visual proposals, never final GT until human review",
+  "inspection": "60 one-second overview frames and enlarged anchor crops; not every intermediate frame was inspected",
+  "status_intervals": [
+    {
+      "first": 125,
+      "last": 225,
+      "status": "out_of_frame"
+    },
+    {
+      "first": 450,
+      "last": 500,
+      "status": "out_of_frame"
+    },
+    {
+      "first": 600,
+      "last": 650,
+      "status": "out_of_frame"
+    },
+    {
+      "first": 900,
+      "last": 1375,
+      "status": "out_of_frame"
+    }
+  ],
+  "anchors": [
+    {
+      "frame": 0,
+      "status": "visible",
+      "box": [
+        851,
+        37,
+        13,
+        16
+      ]
+    },
+    {
+      "frame": 25,
+      "status": "visible",
+      "box": [
+        835,
+        81,
+        11,
+        14
+      ]
+    },
+    {
+      "frame": 50,
+      "status": "visible",
+      "box": [
+        624,
+        494,
+        16,
+        14
+      ]
+    },
+    {
+      "frame": 75,
+      "status": "visible",
+      "box": [
+        723,
+        515,
+        13,
+        18
+      ]
+    },
+    {
+      "frame": 400,
+      "status": "visible",
+      "box": [
+        670,
+        807,
+        39,
+        88
+      ]
+    },
+    {
+      "frame": 425,
+      "status": "visible",
+      "box": [
+        646,
+        790,
+        72,
+        98
+      ]
+    },
+    {
+      "frame": 525,
+      "status": "visible",
+      "box": [
+        964,
+        669,
+        11,
+        15
+      ]
+    },
+    {
+      "frame": 550,
+      "status": "visible",
+      "box": [
+        935,
+        663,
+        11,
+        14
+      ]
+    },
+    {
+      "frame": 575,
+      "status": "visible",
+      "box": [
+        927,
+        657,
+        11,
+        15
+      ]
+    },
+    {
+      "frame": 675,
+      "status": "visible",
+      "box": [
+        352,
+        228,
+        58,
+        81
+      ]
+    },
+    {
+      "frame": 700,
+      "status": "visible",
+      "box": [
+        360,
+        231,
+        59,
+        79
+      ]
+    },
+    {
+      "frame": 725,
+      "status": "visible",
+      "box": [
+        380,
+        233,
+        57,
+        80
+      ]
+    },
+    {
+      "frame": 750,
+      "status": "visible",
+      "box": [
+        927,
+        662,
+        11,
+        16
+      ]
+    },
+    {
+      "frame": 775,
+      "status": "visible",
+      "box": [
+        934,
+        665,
+        11,
+        15
+      ]
+    },
+    {
+      "frame": 800,
+      "status": "visible",
+      "box": [
+        954,
+        680,
+        11,
+        15
+      ]
+    },
+    {
+      "frame": 1425,
+      "status": "visible",
+      "box": [
+        686,
+        261,
+        12,
+        16
+      ]
+    },
+    {
+      "frame": 1450,
+      "status": "visible",
+      "box": [
+        678,
+        257,
+        14,
+        17
+      ]
+    },
+    {
+      "frame": 1475,
+      "status": "visible",
+      "box": [
+        559,
+        760,
+        10,
+        25
+      ]
+    },
+    {
+      "frame": 100,
+      "status": "uncertain"
+    },
+    {
+      "frame": 250,
+      "status": "uncertain"
+    },
+    {
+      "frame": 275,
+      "status": "uncertain"
+    },
+    {
+      "frame": 300,
+      "status": "uncertain"
+    },
+    {
+      "frame": 325,
+      "status": "uncertain"
+    },
+    {
+      "frame": 350,
+      "status": "uncertain"
+    },
+    {
+      "frame": 375,
+      "status": "uncertain"
+    },
+    {
+      "frame": 825,
+      "status": "uncertain"
+    },
+    {
+      "frame": 850,
+      "status": "uncertain"
+    },
+    {
+      "frame": 875,
+      "status": "uncertain"
+    },
+    {
+      "frame": 1400,
+      "status": "uncertain"
+    }
+  ],
+  "interpolate": [
+    [
+      525,
+      550
+    ],
+    [
+      550,
+      575
+    ],
+    [
+      675,
+      700
+    ],
+    [
+      700,
+      725
+    ],
+    [
+      750,
+      775
+    ],
+    [
+      775,
+      800
+    ]
+  ],
+  "notes": [
+    "All proposals have reviewed=0.",
+    "Range statuses are suggestions from sparse inspection, not a claim of checking each frame.",
+    "No interpolation across camera cuts, fast flight, or visibility changes.",
+    "Frame 400 is partially occluded; inspect visible extent closely.",
+    "White objects on the ground during celebrations are not automatically balls."
+  ]
+}

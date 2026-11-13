@@ -1,0 +1,62 @@
+{
+  "source": "C:\\Users\\Nikolai\\Desktop\\ImageProcessing\\MiniProject\\data\\soccernet\\train",
+  "seed": 42,
+  "mot_origin": 1,
+  "split_unit": "gameID",
+  "validation_games": [
+    "9"
+  ],
+  "sequences": [
+    {
+      "name": "SNMOT-060",
+      "game": "4",
+      "ball_ids": [
+        18
+      ],
+      "width": 1920,
+      "height": 1080,
+      "fps": 25.0,
+      "frames": 750,
+      "imdir": "img1",
+      "split": "train",
+      "converted_frames": 10
+    },
+    {
+      "name": "SNMOT-097",
+      "game": "6",
+      "ball_ids": [
+        1
+      ],
+      "width": 1920,
+      "height": 1080,
+      "fps": 25.0,
+      "frames": 750,
+      "imdir": "img1",
+      "split": "train",
+      "converted_frames": 10
+    },
+    {
+      "name": "SNMOT-151",
+      "game": "9",
+      "ball_ids": [
+        16
+      ],
+      "width": 1920,
+      "height": 1080,
+      "fps": 25.0,
+      "frames": 750,
+      "imdir": "img1",
+      "split": "val",
+      "converted_frames": 10
+    }
+  ],
+  "counts": {
+    "train": 20,
+    "val": 10
+  },
+  "include_unlabeled_negatives": false,
+  "median_ball_wh": [
+    16.5,
+    16.0
+  ]
+}
